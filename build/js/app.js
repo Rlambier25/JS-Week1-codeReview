@@ -4,45 +4,43 @@ exports.apiKey = "80bf4b5409bb6cb199e732b8d1d7cd098615482f";
 },{}],2:[function(require,module,exports){
 var apiKey = require('./../.env').apiKey;
 
-exports.Github = function(){
+exports.Repository = function(){
 };
-
-exports.Github.prototype.getRepos = function(user, name) {
-  $.get('https://api.github.com/users/'+ user +'?access_token=' + apiKey).then(function(response) {
+exports.Repository.prototype.getRepos = function(user) {
+  $.get('https://api.github.com/users/'+ user +'/repos?access_token=' + apiKey).then(function(response){
     console.log(response);
-    var name = text(response.name);
+    $('.githubUser').text("These are the repositories for: " + user + ":" +response[0].name);
   }).fail(function(error) {
     $('.githubUser').text(error.responseJSON.message);
   });
 };
 
 },{"./../.env":1}],3:[function(require,module,exports){
-var apiKey = require('./../.env').apiKey;
-var Github = require('./../js/user.js').Github;
-
+var Repository = require('../js/user.js').Repository;
 
 $(document).ready(function() {
-  var currentGithubObject = new Github();
-  $('#githubProfile').click(function() {
+  var currentRepository = new Repository();
+  $('#githubProfile').click(function(){
     var user = $('#user').val();
     $('#user').val("");
-    var github = currentGithubObject.getRepos(response);
-    $('.githubUser').text("Your github user is " + user + " is " + github + ".");
+    console.log(user);
+    var repositories = currentRepository.getRepos(user);
+    console.log(repositories);
+    $('.githubUser').text('These are the repositories for:' + user + ':' + repositories + '.');
   });
 });
 
 var apiKey = require('./../.env').apiKey;
 
-exports.Github = function(){
+exports.Repository = function(){
 };
-
-exports.Github.prototype.getRepos = function(user, name) {
-  $.get('https://api.github.com/users/'+ user +'?access_token=' + apiKey).then(function(response) {
+exports.Repository.prototype.getRepos = function(user) {
+  $.get('https://api.github.com/users/'+ user +'/repos?access_token=' + apiKey).then(function(response){
     console.log(response);
-    var name = text(response.name);
+    $('.githubUser').text("These are the repositories for: " + user + ":" +response[0].name);
   }).fail(function(error) {
     $('.githubUser').text(error.responseJSON.message);
   });
 };
 
-},{"./../.env":1,"./../js/user.js":2}]},{},[3]);
+},{"../js/user.js":2,"./../.env":1}]},{},[3]);

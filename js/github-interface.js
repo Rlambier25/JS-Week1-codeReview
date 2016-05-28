@@ -1,13 +1,13 @@
-var apiKey = require('./../.env').apiKey;
-var Github = require('./../js/user.js').Github;
-
+var Repository = require('../js/user.js').Repository;
 
 $(document).ready(function() {
-  var currentGithubObject = new Github();
-  $('#githubProfile').click(function() {
+  var currentRepository = new Repository();
+  $('#githubProfile').click(function(){
     var user = $('#user').val();
     $('#user').val("");
-    var github = currentGithubObject.getRepos(response);
-    $('.githubUser').text("Your github user is " + user + " is " + github + ".");
+    console.log(user);
+    var repositories = currentRepository.getRepos(user);
+    console.log(repositories);
+    $('.githubUser').text('These are the repositories for:' + user + ':' + repositories + '.');
   });
 });

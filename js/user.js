@@ -1,12 +1,11 @@
 var apiKey = require('./../.env').apiKey;
 
-exports.Github = function(){
+exports.Repository = function(){
 };
-
-exports.Github.prototype.getRepos = function(user, name) {
-  $.get('https://api.github.com/users/'+ user +'?access_token=' + apiKey).then(function(response) {
+exports.Repository.prototype.getRepos = function(user) {
+  $.get('https://api.github.com/users/'+ user +'/repos?access_token=' + apiKey).then(function(response){
     console.log(response);
-    var name = text(response.name);
+    $('.githubUser').text("These are the repositories for: " + user + ":" +response[0].name);
   }).fail(function(error) {
     $('.githubUser').text(error.responseJSON.message);
   });
