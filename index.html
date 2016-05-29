@@ -1,22 +1,30 @@
 
+
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="build/css/vendor.css">
-    <script src="build/js/vendor.min.js"></script>
-    <script type="text/javascript" src="build/js/app.js"></script>
-    <title>Github-User-Locater</title>
-  </head>
-  <body>
+<head>
+  <title>GitHub User Lookup</title>
+
+  <link rel="stylesheet" href="build/css/vendor.css">
+  <script src="build/js/vendor.min.js"></script>
+  <script type="text/javascript" src="build/js/app.js"></script>
+  <link rel="stylesheet" href="build/css/styles.css">
+</head>
+<body>
+  <div class="jumbotron">
     <div class="container">
-      <h1>Find any Github user and look at there repositories!</h1>
-      <label for="user">Enter a Github user:</label>
-      <input id="user" type="text">
-      <button class="btn-success" id="githubProfile">Get repositories</button>
-      <div class="githubUser"></div>
+      <div class="header">
+        <h1>Github User LookUp</h1>
+        <p>Enter any GitHub user name to view a list of their github repositories!</p>
+      </div>
+      <form id="form" class="form-inline" required>
+        <label for="username" id="userSearch"  required="required">Enter a Username:</label><br>
+        <input type="text" id="input" required="required"><br><br>
+        <button type="button" class="btn btn-success" id="search">Search github</button>
+      </form>
     </div>
-  </body>
+  </div>
+  <div id="githubUser"></div>
+</div>
+</body>
 </html>
-
-
-
-<!-- BUILD FILES WILL NEED SLIGHT MODIFICATIONS IN JS FOLDER. DO NOT TOUCH CSS vendor FILES. -->

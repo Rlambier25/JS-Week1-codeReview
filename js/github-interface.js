@@ -1,13 +1,16 @@
-var Repository = require('../js/user.js').Repository;
+//retrieves and links information between the js pages and api page in the project directory
+var user = require('./../js/user.js');
+var apiKey = require('./../.env').apiKey;
+var getRepos = require('./../js/user.js').getRepos;
 
-$(document).ready(function() {
-  var currentRepository = new Repository();
-  $('#githubProfile').click(function(){
-    var user = $('#user').val();
-    $('#user').val("");
-    console.log(user);
-    var repositories = currentRepository.getRepos(user);
-    console.log(repositories);
-    $('.githubUser').text('These are the repositories for:' + user + ':' + repositories + '.');
+$(document).ready(function(){
+  $('#search').click(function(){
+    $('#githubUser').empty();
+    var userSearch = $('#input').val();
+    return  user.getRepos(userSearch);
   });
+});
+
+$('.githubUser').click(function(){
+  getRepos(input);
 });
