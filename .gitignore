@@ -24,6 +24,7 @@
 ######################
 *.log
 
+
 # OS generated files #
 ######################
 .DS_Store
@@ -34,11 +35,10 @@
 ehthumbs.db
 Thumbs.db
 
-# JavaScript #
+# Folders #
 ########
-node_modules/
-.DS_Store
-bower_components/
 build/
+bower_components/
+node_modules/
 tmp/
 .env
