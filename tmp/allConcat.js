@@ -1,7 +1,7 @@
 //retrieves and links information between the js pages and api page in the project directory
 var user = require('./../js/user.js');
 var apiKey = require('./../.env').apiKey;
-var getRepos = require('./../js/user.js').getRepos;
+
 
 $(document).ready(function(){
   $('#search').click(function(){

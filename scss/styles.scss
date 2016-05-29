@@ -14,7 +14,7 @@ $green : #75B975;
 }
 
 body {
-  background-color: #00ff00;
+  background-color: #ffffcc;
 }
 
 #form {
@@ -27,16 +27,24 @@ button {
   text-align: center;
 }
 
-// h1, p, h3, h4, h2, {
-//   text-align: center;
-// }
-//
-// #image {
-//   margin: auto;
-//   text-align: center;
-//   border-radius: 50px;
-//    box-shadow: 10px 10px 5px #888888;
-// }
+h1 {
+  text-align: center;
+}
+
+#name {
+  text-align: left;
+}
+
+#intro {
+  text-align: center;
+}
+
+#image {
+  // margin: auto;
+  // text-align: center;
+  border-radius: 50px;
+   box-shadow: 10px 10px 5px #888888;
+}
 //
 // #date {
 //   text-align: center;
@@ -49,3 +57,6 @@ button {
 // span {
 //   border: 1px solid blue;
 // }
+
+
+ // MUST MANUALLY WRITE: .env/exports.apiKey = "80bf4b5409bb6cb199e732b8d1d7cd098615482f";

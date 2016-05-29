@@ -19,7 +19,9 @@ A website where you can enter the username of a Github user and it will display 
 
 ## Setup API Requirements
 
-* You need to get your own the GitHub API key. Without the key, you can retrieve GitHub information only 60 requests per hour. However, you can access 5,000 requests per hour if you have the key. GitHub refers to these keys as "Personal Access Tokens". You can get the key by generating it via your GitHub account.
+* You need to get your own the GitHub API key. You can look the the github API overview through the link here: https://developer.github.com/v3/
+
+* You may retrieve a API token through here: https://dl.dropboxusercontent.com/s/qk0qcsy487yg7ci/githubgeneratetoken.png?dl=0
 
 * You will need to store the key in a local file with the same filename and location.
 
@@ -30,8 +32,16 @@ A website where you can enter the username of a Github user and it will display 
 * _API key .env (hidden file) file example:_
 **exports.apiKey = "YOUR-API-KEY-GOES-HERE";**
 
-* _In your .js file (JavaScript file) that gets access to the API key, add the following requirement:_
+* _In your [insert_name_here].js file that gets access to the API key, add the following requirement:_
 **var apiKey = require('./../.env').apiKey;**
+
+##Setup Node & Launch server. Once Node is installed and your API is working you must run the following through your terminal:
+
+* npm install -g
+* bower install
+* gulp build
+* gulp serve (server should launch localhost:3000 automatically in browser).
+
 
 ## Known Bugs
 
@@ -54,4 +64,4 @@ Feel free to contact me with questions or suggestions and contribute to the code
 
 _This software is licensed under the MIT license_
 
-Copyright (c) 2016 Reed Lambier.
+Copyright (c) 2016 _Reed Lambier_

@@ -34,15 +34,11 @@
 ehthumbs.db
 Thumbs.db
 
-# Java #
-########
-build/
-.gradle/
-
 # JavaScript #
-##############
+########
 node_modules/
+.DS_Store
 bower_components/
-tmp/
 build/
-.env/
+tmp/
+.env
