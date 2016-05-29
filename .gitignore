@@ -42,6 +42,7 @@ build/
 # JavaScript #
 ##############
 node_modules/
-tmp/
 bower_components/
-.env
+tmp/
+build/
+.env/
