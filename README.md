@@ -45,7 +45,7 @@ A website where you can enter the username of a Github user and it will display 
 
 ## Known Bugs
 
-No known bugs at this moment in time. If you locate an error please email me at Rlambier46@gmail.com
+Still trying to get .gitignore file to comply with github. Finished on home computer and having unknown issues. If you locate an error please email me at Rlambier46@gmail.com
 
 ## Support and contact details
 
